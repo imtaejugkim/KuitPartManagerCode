@@ -22,10 +22,10 @@ class EditActivity : AppCompatActivity() {
             intent.getSerializableExtra("key") as HomePostData?
         } ?: HomePostData("잘못된 데이터 ", R.drawable.post_gray, R.drawable.post_gray, "잘못된 데이터")
 
-        binding.tvEditName.text = data.InstagramID
-        binding.tvEditPostContent.text = data.PostComment
-        binding.sivEditProfile.setImageResource(data.ProfileImage)
-        binding.ivEditPostImg.setImageResource(data.PostImage)
+        binding.tvEditName.text = data.userId
+        binding.tvEditPostContent.text = data.postText
+        binding.sivEditProfile.setImageResource(data.userProfile)
+        binding.ivEditPostImg.setImageResource(data.postImage)
         
         binding.tvEditCancelBtn.setOnClickListener {
             finish()

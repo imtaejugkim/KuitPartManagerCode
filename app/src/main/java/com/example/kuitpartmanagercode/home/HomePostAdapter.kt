@@ -19,11 +19,11 @@ class HomePostAdapter(val items : ArrayList<HomePostData>) : RecyclerView.Adapte
 
     inner class ViewHolder(val binding: ItemHomePostBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item : HomePostData){
-            binding.tvHomePostEdit.text = item.InstagramID
-            binding.tvPostInstaId.text = item.InstagramID
-            binding.sivHomePost.setImageResource(item.ProfileImage)
-            binding.ivHomePost.setImageResource(item.PostImage)
-            binding.tvHomeCommentEdit.text = item.PostComment
+            binding.tvHomePostEdit.text = item.userId
+            binding.tvPostInstaId.text = item.userId
+            binding.sivHomePost.setImageResource(item.userProfile)
+            binding.ivHomePost.setImageResource(item.postImage)
+            binding.tvHomeCommentEdit.text = item.postText
 
             //포스트 옵션 버튼을 눌렀을 때 수정 엑티비티에 String들을 보내고 엑티비티 실행
             binding.ivHomePostOption.setOnClickListener {

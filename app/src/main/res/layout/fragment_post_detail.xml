@@ -130,15 +130,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/siv_home_post" />
 
-    <ImageView
-        android:id="@+id/iv_home_like"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_like_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="12dp"
-        android:src="@drawable/ic_like_empty"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vp_post_detail"/>
+        app:layout_constraintTop_toBottomOf="@id/vp_post_detail">
+
+        <ImageView
+            android:id="@+id/iv_home_like_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_like_empty"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_home_like_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like__filled"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     <ImageView
         android:id="@+id/iv_home_comment"
@@ -147,7 +171,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="13dp"
         android:src="@drawable/ic_post_comment"
-        app:layout_constraintStart_toEndOf="@id/iv_home_like"
+        app:layout_constraintStart_toEndOf="@id/cl_like_change"
         app:layout_constraintTop_toBottomOf="@id/vp_post_detail"/>
 
     <ImageView
@@ -157,7 +181,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="50dp"
         android:src="@drawable/ic_share"
-        app:layout_constraintStart_toEndOf="@id/iv_home_like"
+        app:layout_constraintStart_toEndOf="@id/cl_like_change"
         app:layout_constraintTop_toBottomOf="@id/vp_post_detail"/>
 
     <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
@@ -196,7 +220,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_home_like" />
+        app:layout_constraintTop_toBottomOf="@id/cl_like_change" />
 
     <TextView
         android:id="@+id/tv_post_insta_id"
@@ -209,7 +233,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_home_like" />
+        app:layout_constraintTop_toBottomOf="@id/cl_like_change" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -233,7 +257,7 @@
         android:layout_marginTop="28dp"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@id/tv_post_insta_id"
-        app:layout_constraintTop_toBottomOf="@id/iv_home_like" />
+        app:layout_constraintTop_toBottomOf="@id/cl_like_change" />
 
     <TextView
         android:id="@+id/tv_post_comment_plus"

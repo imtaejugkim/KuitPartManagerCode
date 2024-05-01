@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.example.kuitpartmanagercode.R
 import com.example.kuitpartmanagercode.databinding.FragmentPostDetailBinding
 
 class PostDetailFragment : Fragment() {
@@ -20,8 +22,33 @@ class PostDetailFragment : Fragment() {
 
         initDummyData()
         initViewPager()
+        initChangeLike()
+        initBackPressed()
 
         return binding.root
+    }
+
+    private fun initBackPressed() {
+        binding.ivPrevious.setOnClickListener {
+            val profileFragment = ProfileFragment()
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.main_frm, profileFragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
+    }
+
+    private fun initChangeLike() {
+        binding.clLikeChange.setOnClickListener {
+            if(binding.ivHomeLikeOff.isVisible){
+                binding.ivHomeLikeOff.visibility = View.GONE
+                binding.ivHomeLikeOn.visibility = View.VISIBLE
+            }else{
+                binding.ivHomeLikeOff.visibility = View.VISIBLE
+                binding.ivHomeLikeOn.visibility = View.GONE
+            }
+        }
     }
 
     private fun initViewPager() {

@@ -26,8 +26,8 @@ class ProfileFragment : Fragment() {
         if (bundle != null && bundle.containsKey("key")) {
             val homePostData = bundle.getSerializable("key") as HomePostData
 
-            binding.tvEditProfileName.text = homePostData.InstagramID
-            binding.sivProfileEdit.setImageResource(homePostData.ProfileImage)
+            binding.tvEditProfileName.text = homePostData.userId
+            binding.sivProfileEdit.setImageResource(homePostData.userProfile)
         }
 
         initView()
