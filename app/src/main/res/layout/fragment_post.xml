@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".profile.PostFragment">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:columnCount="3"
+        android:rowCount="2">
+
+        <ImageView
+            android:id="@+id/iv_post1"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_margin="1dp"
+            android:scaleType="centerCrop"/>
+
+
+    </GridLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

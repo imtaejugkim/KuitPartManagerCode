@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_edit_follower_image"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#D9D9D9"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+    <TextView
+            android:id="@+id/tv_edit_follower_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/siv_edit_follower_image"
+            app:layout_constraintStart_toEndOf="@id/siv_edit_follower_image"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="11dp"
+            android:text="Follower ID가 들어갈 자리"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+    <TextView
+            android:id="@+id/tv_edit_follower_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/siv_edit_follower_image"
+            app:layout_constraintStart_toEndOf="@id/siv_edit_follower_image"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="11dp"
+            android:text="Follower 이름이 들어갈 자리"
+            android:textColor="#737373"
+            android:textSize="12sp"/>
+
+    <ImageView
+            android:id="@+id/follower_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete_square"
+            app:layout_constraintTop_toTopOf="@id/siv_edit_follower_image"
+            app:layout_constraintStart_toEndOf="@id/siv_edit_follower_image"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="224dp"/>
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/follower_delete"
+            app:layout_constraintEnd_toEndOf="@id/follower_delete"
+            app:layout_constraintStart_toStartOf="@id/follower_delete"
+            app:layout_constraintTop_toTopOf="@id/follower_delete">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삭제"
+                android:textSize="11sp"
+                android:textColor="@color/black" />
+
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
